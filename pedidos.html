@@ -7,34 +7,40 @@
 </head>
 <body>
     <input type="text" id="nome">
-    <input type="text" id="telefone">
+    <!-- <input type="text" id="telefone">
     <p></p>
-    <p></p>
+    <p></p> -->
     <button onclick="cadastro()">cadastro</button>
     <button onclick="limpar()">limpar</button>
 
 </body>
 <script>
     let cliente = {
-        nomeFantasia:[],
+        nomeFantasia:["arcos",""],
         telefone:[]
     }
+    
+   
+   
+  
+
+
     var p = window.document.getElementsByTagName('p')[0]
     var r = document.getElementsByTagName('p')[1]
 
+
     function cadastro(){
         let n = document.getElementById('nome').value
-        let t = document.getElementById('telefone').value
-        nomeFantasia = 
-        telefone= t 
-        p.innerHTML= nomeFantasia
-        r.innerHTML= telefone
+ 
+        cliente.nomeFantasia.push= n   
+        console.log(cliente.nomeFantasia)
+        
     }
-    function limpar(){
+  /*  function limpar(){
         p.innerHTML= ''
         r.innerHTML= ''
     }
- 
+ */
 
 </script>
 </html>
