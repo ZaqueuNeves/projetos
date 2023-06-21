@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,55 +16,7 @@
 
 </body>
 <script>
-    let cliente = {
-        nomeFantasia:["arcos",""],
-        telefone:[]
-    }
-    
    
-   
-  
-
-
-    var p = window.document.getElementsByTagName('p')[0]
-    var r = document.getElementsByTagName('p')[1]
-
-
-    function cadastro(){
-        let n = document.getElementById('nome').value
-        
-        cliente.nomeFantasia.push(n)   
-        console.log(cliente.nomeFantasia)
-        
-    }
-  /*  function limpar(){
-        p.innerHTML= ''
-        r.innerHTML= ''
-    }
- */
-    
 </script>
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCsy96s1UdMtVfUr6NhYeuld6ozAIk7bG8",
-      authDomain: "aprender-10804.firebaseapp.com",
-      projectId: "aprender-10804",
-      storageBucket: "aprender-10804.appspot.com",
-      messagingSenderId: "1080470892142",
-      appId: "1:1080470892142:web:e4b74a14071cdf4877c07f",
-      measurementId: "G-M8NLFQ2H04"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+
 </html>
