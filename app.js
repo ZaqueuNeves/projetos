@@ -71,5 +71,5 @@ function mostrar(){
         let item= document.createElement('li')
         item.appendChild(document.createTextNode(cliente.nomeFantasia[i]+ "  "+cliente.telefone[i]))
         lista.appendChild(item)
-    }
+    } 
 }
