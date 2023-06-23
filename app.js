@@ -18,7 +18,10 @@ function cadastro(validar,validarCadastro){
         alert("campo vazio")
     }else if( validarCadastro== false){
    alert("usuario cadastrado")
-    }else{ 
+    }else if ( validarCadastro== true){
+        alert("esse nome ja foi usado, tente um nome diferente")
+    }
+    else{ 
     cliente.nomeFantasia.push(n)
     cliente.telefone.push(t)  
     console.log(cliente.nomeFantasia,cliente.telefone)}
@@ -29,10 +32,13 @@ function cadastro(validar,validarCadastro){
 function validarCadastro(){    
     let ler = cliente.nomeFantasia.indexOf(document.getElementById('nome').value)
     let tel = cliente.telefone.indexOf(document.getElementById('telefone').value)
-        if (ler >= 0 && tel >= 0){
+    let olha= cliente.nomeFantasia[ler]    
+    if ((ler >= 0 && tel >= 0) &&  (olha == ler)){
   
             return false
-        } 
+        } else if (olha == null){
+            
+        }else{return true}
 
 }
 function validar(){
@@ -59,4 +65,11 @@ function limpar(validar){
     } console.log(cliente.nomeFantasia, cliente.telefone)
 
 }
-
+function mostrar(){
+    let lista= document.getElementById('lista')
+    for ( var i = 0 ; i < cliente.nomeFantasia.length; i++){
+        let item= document.createElement('li')
+        item.appendChild(document.createTextNode(cliente.nomeFantasia[i]+ "  "+cliente.telefone[i]))
+        lista.appendChild(item)
+    }
+}
